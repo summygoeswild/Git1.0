@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us</title>
+  <style>
+    :root{--bg:#f7f9fc;--card:#fff;--accent:#2b7cff;--muted:#666}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,#ffffffcc,var(--accent)11%);padding:2rem 1rem;border-bottom:1px solid #e6eefc}
+    .container{max-width:900px;margin:0 auto;padding:1rem}
+    h1{margin:0 0 .25rem;font-size:1.6rem}
+    p.lead{margin:0;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+    .card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 3px rgba(15,23,42,.05);border:1px solid #eef6ff}
+    .avatar{width:56px;height:56px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#eef8ff;color:var(--accent);font-weight:700;margin-right:.75rem}
+    .team-item{display:flex;align-items:center}
+    footer{padding:1rem;text-align:center;color:var(--muted);font-size:.9rem;margin-top:1.5rem}
+    @media (min-width:640px){header{padding:2.5rem 1rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>About Us</h1>
+      <p class="lead">Small team. Big ideas. Focused on building clear, useful web experiences.</p>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section aria-labelledby="mission">
+      <h2 id="mission">Our Mission</h2>
+      <p>Deliver simple, accessible, and maintainable web products that help people get things done quickly and confidently.</p>
+    </section>
+
+    <section aria-labelledby="values" style="margin-top:1rem">
+      <h2 id="values">Core Values</h2>
+      <ul>
+        <li>Clarity over cleverness</li>
+        <li>Accessibility by default</li>
+        <li>Continuous improvement</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="team" style="margin-top:1rem">
+      <h2 id="team">Team</h2>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <div class="team-item">
+            <div class="avatar" aria-hidden="true">AB</div>
+            <div>
+              <strong>Ana Brown</strong><br />
+              <span style="color:var(--muted)">Product & Design</span>
+            </div>
+          </div>
+          <p style="margin-top:.5rem;color:var(--muted)">Designs intuitive interfaces and ensures usability across devices.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="team-item">
+            <div class="avatar" aria-hidden="true">MJ</div>
+            <div>
+              <strong>Max Jones</strong><br />
+              <span style="color:var(--muted)">Engineering</span>
+            </div>
+          </div>
+          <p style="margin-top:.5rem;color:var(--muted)">Builds reliable, maintainable code and focuses on performance and testing.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="team-item">
+            <div class="avatar" aria-hidden="true">LS</div>
+            <div>
+              <strong>Lee Smith</strong><br />
+              <span style="color:var(--muted)">Operations</span>
+            </div>
+          </div>
+          <p style="margin-top:.5rem;color:var(--muted)">Keeps projects on track and ensures smooth deployments and support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact" style="margin-top:1rem">
+      <h2 id="contact">Contact</h2>
+      <p style="color:var(--muted)">Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> Company Name. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
